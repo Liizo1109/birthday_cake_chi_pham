@@ -154,31 +154,23 @@
 
 .photo-layer {
   position: absolute;
-  inset: 0;
-  z-index: 10;            /* ĐÈ LÊN BÁNH */
+  top: 65%;                 /* ĐẨY XUỐNG DƯỚI BÁNH + CHỮ */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;               /* DƯỚI BÁNH + CHỮ, TRÊN NỀN */
   pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  opacity: 0;             /* ẨN BAN ĐẦU */
-}
 
-.photo-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  opacity: 0;
+
+  opacity: 0;               /* ẨN BAN ĐẦU */
 }
 
 .photo-layer img {
   width: 120px;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 0 15px rgba(255,255,255,0.4);
   transform: scale(0.8);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -188,7 +180,7 @@
 .photo-layer img.active {
   transform: scale(1.3);
   box-shadow: 0 0 35px rgba(255,255,255,0.9);
-  z-index: 20;
+  z-index: 10;
 }
 
 
@@ -410,5 +402,6 @@
       </div>
   </body>
 </html>
+
 
 
